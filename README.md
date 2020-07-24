@@ -1,4 +1,4 @@
-#Github Jobs Clone using SvelteJS
+# Github Jobs Clone using SvelteJS
 
 Inspired from : https://www.youtube.com/watch?v=fxY1q4SCB64
 
