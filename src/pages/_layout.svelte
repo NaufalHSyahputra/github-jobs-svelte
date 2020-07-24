@@ -1,3 +1,7 @@
+<script>
+  import { url } from "@sveltech/routify";
+</script>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/#">GitHub Jobs</a>
   <button
@@ -14,7 +18,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/#">
+        <a class="nav-link" href={$url('../index')}>
           Home
           <span class="sr-only">(current)</span>
         </a>

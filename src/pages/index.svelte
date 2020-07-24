@@ -21,13 +21,23 @@
   }
 
   async function getData() {
-    const data = await get({ page, desc, location, full_time });
+    const data = await get("/positions.json", {
+      page,
+      desc,
+      location,
+      full_time,
+    });
     const checkPage = await checkNextPage();
     return data.data;
   }
 
   const checkNextPage = async () => {
-    await get({ page: page + 1, desc, location, full_time }).then((res) => {
+    await get("/positions.json", {
+      page: page + 1,
+      desc,
+      location,
+      full_time,
+    }).then((res) => {
       has_next_page = res.data.length > 0 ? true : false;
     });
   };
