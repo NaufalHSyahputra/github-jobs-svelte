@@ -1,6 +1,7 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "homepage": "https://naufalhsyahputra.github.io/github-jobs-svelte",
   "scripts": {
     "build": "rollup -c",
     "dev": "routify -c my-server",
