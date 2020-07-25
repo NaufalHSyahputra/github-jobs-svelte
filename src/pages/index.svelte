@@ -47,9 +47,16 @@
   const submitFilter = async () => {
     promises = getData();
   };
+  const resetFilter = async () => { 
+    page = 1;
+    desc = "";
+    location = "";
+    full_time = false;
+    promises = getData();
+  }
 </script>
 
-<Filter bind:desc bind:location bind:full_time on:submitFilter={submitFilter} />
+<Filter bind:desc bind:location bind:full_time on:submitFilter={submitFilter} on:resetFilter={resetFilter} />
 <br />
 {#await promises}
 <Loading />
