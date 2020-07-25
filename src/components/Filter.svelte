@@ -15,7 +15,7 @@
   <div class="card-header">Filter Jobs</div>
   <div class="card-body">
     <div class="form-row align-items-center">
-      <div class="col-sm-6 my-1">
+      <div class="col-sm-5 my-1">
         <label for="inlineFormInputName">Job Description</label>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -45,7 +45,7 @@
             bind:value={location} />
         </div>
       </div>
-      <div class="col-sm-1 my-1 mt-4">
+      <div class="col-sm-2 my-1 mt-4">
         <div class="form-check">
           <input
             class="form-check-input"
