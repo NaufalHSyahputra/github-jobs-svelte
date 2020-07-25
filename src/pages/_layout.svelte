@@ -3,7 +3,7 @@
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/#">GitHub Jobs</a>
+  <a class="navbar-brand" href={$url('/index')}>GitHub Jobs</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -18,7 +18,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href={$url('../index')}>
+        <a class="nav-link" href={$url('/index')}>
           Home
           <span class="sr-only">(current)</span>
         </a>

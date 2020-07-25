@@ -1,8 +1,9 @@
 <script>
+  import { goto } from '@sveltech/routify'
   export let job;
 </script>
 
-<div class="card text-white bg-secondary">
+<div class="card text-white bg-secondary" on:click={$goto(`job/${job.id}`)} style="cursor: pointer;">
   <div class="card-body">
     <h5 class="card-title">
       {job.title} - {job.company}

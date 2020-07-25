@@ -1,8 +1,11 @@
 <script>
   import { get } from "./../plugins/axios";
-  import JobPaginator from "./../components/JobPaginator.svelte";
-  import Job from "./../components/Job.svelte";
-  import Filter from "./../components/Filter.svelte";
+  import { 
+    Job,
+    JobPaginator,
+    Filter, 
+    Loading
+  } from '../components/';
 
   let old_page = 1;
   let page = 1;
@@ -13,7 +16,6 @@
   let full_time = false;
 
   let promises = getData();
-  let jobs = [];
 
   $: if (page !== old_page) {
     promises = getData();
@@ -27,7 +29,7 @@
       location,
       full_time,
     });
-    const checkPage = await checkNextPage();
+    await checkNextPage();
     return data.data;
   }
 
@@ -50,9 +52,7 @@
 <Filter bind:desc bind:location bind:full_time on:submitFilter={submitFilter} />
 <br />
 {#await promises}
-  <div class="d-flex justify-content-center">
-    <img src="assets/img/91.gif" alt="Loading" />
-  </div>
+<Loading />
 {:then jobs}
   {#if jobs.length > 0}
     <JobPaginator bind:page {has_next_page} />
