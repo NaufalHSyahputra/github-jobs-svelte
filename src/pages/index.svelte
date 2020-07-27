@@ -1,11 +1,6 @@
 <script>
   import { get } from "./../plugins/axios";
-  import { 
-    Job,
-    JobPaginator,
-    Filter, 
-    Loading
-  } from '../components/';
+  import { Job, JobPaginator, Filter, Loading } from "../components/";
 
   let old_page = 1;
   let page = 1;
@@ -47,19 +42,24 @@
   const submitFilter = async () => {
     promises = getData();
   };
-  const resetFilter = async () => { 
+  const resetFilter = async () => {
     page = 1;
     desc = "";
     location = "";
     full_time = false;
     promises = getData();
-  }
+  };
 </script>
 
-<Filter bind:desc bind:location bind:full_time on:submitFilter={submitFilter} on:resetFilter={resetFilter} />
+<Filter
+  bind:desc
+  bind:location
+  bind:full_time
+  on:submitFilter={submitFilter}
+  on:resetFilter={resetFilter} />
 <br />
 {#await promises}
-<Loading />
+  <Loading />
 {:then jobs}
   {#if jobs.length > 0}
     <JobPaginator bind:page {has_next_page} />

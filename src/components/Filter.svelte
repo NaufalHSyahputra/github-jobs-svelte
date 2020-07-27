@@ -6,7 +6,8 @@
   function submitFilter() {
     dispatch("submitFilter");
   }
-  function resetFilter() { 
+
+  function resetFilter() {
     dispatch("resetFilter");
   }
   export let desc;
@@ -62,7 +63,9 @@
   <div class="card-footer">
     <div class="row float-right">
       <div class="col-md-6">
-        <button class="btn btn-secondary float-right" on:click={resetFilter}>Reset</button>
+        <button class="btn btn-secondary float-right" on:click={resetFilter}>
+          Reset
+        </button>
       </div>
       <div class="col-md-6">
         <button class="btn btn-success float-right" on:click={submitFilter}>

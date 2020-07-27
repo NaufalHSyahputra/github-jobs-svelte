@@ -1,14 +1,15 @@
 <script>
-    export let need_card;
+  export let need_card;
 </script>
+
 {#if need_card}
-<div class="card">
+  <div class="card">
     <div class="d-flex justify-content-center">
       <img src="/github-jobs-svelte/assets/img/91.gif" alt="Loading" />
     </div>
-</div>
+  </div>
 {:else}
-<div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center">
     <img src="/github-jobs-svelte/assets/img/91.gif" alt="Loading" />
-</div>
+  </div>
 {/if}
